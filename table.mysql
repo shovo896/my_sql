@@ -1,0 +1,20 @@
+CREATE DATABASE BankManagementSystem;
+
+USE BankManagementSystem;
+
+CREATE TABLE accounts (
+    account_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    contact VARCHAR(50),
+    balance DECIMAL(10, 2),
+    password VARCHAR(50)
+);
+
+CREATE TABLE transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    account_id INT,
+    type VARCHAR(20),
+    amount DECIMAL(10, 2),
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (account_id) REFERENCES accounts(account_id)
+);
