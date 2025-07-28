@@ -1,45 +1,11 @@
-Here's a **comprehensive MySQL program** that covers **all major concepts** and exceeds **300 lines**. This acts as a **summary of a full MySQL course** and includes:
-
----
-
-### ✅ Covered Topics:
-
-* Database & table creation
-* Data types
-* `INSERT`, `SELECT`, `UPDATE`, `DELETE`
-* `WHERE`, `ORDER BY`, `GROUP BY`, `HAVING`
-* `JOIN` (INNER, LEFT, RIGHT, FULL OUTER via `UNION`)
-* `SUBQUERIES`
-* `VIEWS`
-* `INDEX`
-* `STORED PROCEDURE`
-* `FUNCTION`
-* `TRIGGER`
-* `TRANSACTION`
-* `ROLLBACK` & `COMMIT`
-* `IF`, `CASE`, `LOOPS`
-* `USER` and `GRANT` (basic security)
-* `CONSTRAINTS` (`PRIMARY`, `FOREIGN`, `CHECK`, `UNIQUE`)
-* Comments and structure for clarity
-
----
-
-### 🧾 File: `full_mysql_course_demo.sql`
-
-```sql
--- ===========================================
--- MySQL Full Course Summary Script (300+ lines)
--- Covers all major MySQL features in one script
--- ===========================================
 
 -- Drop and create the database
 DROP DATABASE IF EXISTS full_course_demo;
 CREATE DATABASE full_course_demo;
 USE full_course_demo;
 
--- ===========================================
+
 -- SECTION 1: TABLES AND CONSTRAINTS
--- ===========================================
 
 CREATE TABLE departments (
     dept_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -56,9 +22,9 @@ CREATE TABLE employees (
     FOREIGN KEY (dept_id) REFERENCES departments(dept_id)
 );
 
--- ===========================================
+
 -- SECTION 2: INSERTION
--- ===========================================
+
 
 -- Insert Departments
 INSERT INTO departments(dept_name) VALUES ('HR'), ('Engineering'), ('Finance');
@@ -71,9 +37,8 @@ INSERT INTO employees(emp_name, email, salary, join_date, dept_id) VALUES
 ('David', 'david@example.com', 120000, '2020-12-15', 2),
 ('Eva', 'eva@example.com', 95000, '2023-07-18', 1);
 
--- ===========================================
+
 -- SECTION 3: SELECT & FILTERING
--- ===========================================
 
 -- Basic Select
 SELECT * FROM employees;
@@ -118,9 +83,9 @@ SELECT e.emp_name, d.dept_name
 FROM employees e
 RIGHT JOIN departments d ON e.dept_id = d.dept_id;
 
--- ===========================================
+
 -- SECTION 5: SUBQUERIES
--- ===========================================
+
 
 -- Scalar Subquery
 SELECT emp_name FROM employees WHERE salary = (SELECT MAX(salary) FROM employees);
@@ -132,9 +97,7 @@ WHERE salary > (
     SELECT AVG(salary) FROM employees e2 WHERE e2.dept_id = e1.dept_id
 );
 
--- ===========================================
--- SECTION 6: VIEWS
--- ===========================================
+
 
 CREATE VIEW high_earners AS
 SELECT emp_name, salary FROM employees WHERE salary > 80000;
@@ -147,9 +110,9 @@ SELECT * FROM high_earners;
 
 CREATE INDEX idx_salary ON employees(salary);
 
--- ===========================================
+
 -- SECTION 8: STORED PROCEDURE
--- ===========================================
+
 
 DELIMITER //
 
@@ -163,9 +126,8 @@ DELIMITER ;
 
 CALL GetEmployeeCountByDept(2);
 
--- ===========================================
+
 -- SECTION 9: FUNCTIONS
--- ===========================================
 
 DELIMITER //
 
@@ -181,9 +143,8 @@ DELIMITER ;
 
 SELECT emp_name, YearJoined(join_date) FROM employees;
 
--- ===========================================
--- SECTION 10: TRIGGERS
--- ===========================================
+
+-- Triggers 
 
 CREATE TABLE emp_audit (
     audit_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -227,9 +188,9 @@ DELIMITER ;
 UPDATE employees SET salary = salary + 5000 WHERE emp_name = 'Alice';
 DELETE FROM employees WHERE emp_name = 'Charlie';
 
--- ===========================================
+
 -- SECTION 11: TRANSACTIONS
--- ===========================================
+
 
 START TRANSACTION;
 UPDATE employees SET salary = salary - 10000 WHERE emp_name = 'David';
@@ -239,9 +200,9 @@ START TRANSACTION;
 UPDATE employees SET salary = salary - 5000 WHERE emp_name = 'David';
 COMMIT;
 
--- ===========================================
+
 -- SECTION 12: CONTROL FLOW
--- ===========================================
+
 
 -- Using CASE
 SELECT emp_name, 
@@ -252,17 +213,16 @@ CASE
 END AS salary_band
 FROM employees;
 
--- ===========================================
+
 -- SECTION 13: USER & PRIVILEGES
 -- (only works with root/admin privileges)
--- ===========================================
+
 
 -- CREATE USER 'course_user'@'localhost' IDENTIFIED BY 'demo123';
 -- GRANT SELECT, INSERT ON full_course_demo.* TO 'course_user'@'localhost';
 
--- ===========================================
+
 -- SECTION 14: FINAL CHECKS
--- ===========================================
 
 -- Final View of All Tables
 SELECT * FROM departments;
@@ -272,17 +232,9 @@ SELECT * FROM emp_audit;
 -- Drop everything if needed (cleanup)
 -- DROP DATABASE full_course_demo;
 
--- ===========================================
+
 -- END OF SCRIPT
--- ===========================================
-```
 
----
 
-### 🧠 How to Use This:
 
-1. **Save** as `full_mysql_course_demo.sql`
-2. **Run** via MySQL Workbench, phpMyAdmin, or CLI
-3. **Learn & Modify**: Use this as a base to experiment with every topic
 
-Would you like a **PDF printable version**, or a **step-by-step explanation** of each section?
