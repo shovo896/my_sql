@@ -1,0 +1,88 @@
+
+# MySQL Practice Repository
+
+Welcome to the MySQL Practice Repository  
+This repository is maintained by [shovo896](https://github.com/shovo896) and is intended for learning, practicing, and  demonstrating all key concepts of MySQL through real-world examples and SQL scripts.
+
+---
+
+##📁 Repository Structure
+
+
+my\_sql/
+│
+├── basic\_commands.sql          -- Basic SQL syntax: SELECT, INSERT, DELETE, UPDATE
+├── joins.sql                   -- INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN
+├── subqueries.sql              -- Subqueries, nested SELECTs, correlated subqueries
+├── views\_and\_indexes.sql       -- Creating and managing views and indexes
+├── triggers.sql                -- BEFORE/AFTER INSERT/UPDATE/DELETE triggers
+├── procedures\_and\_functions.sql-- Stored procedures and user-defined functions
+├── transactions.sql            -- COMMIT, ROLLBACK, SAVEPOINT
+├── constraints.sql             -- Primary, Foreign, Unique, Check constraints
+├── full\_course\_summary.sql     -- Full MySQL course in a single 300+ line script
+└── README.md                   -- Documentation (this file)
+
+
+---
+
+## 🧠 Topics Covered
+
+✅ Database creation and basic DDL  
+✅ Data types and constraints  
+✅ SELECT, INSERT, UPDATE, DELETE  
+✅ Aggregate functions, GROUP BY, HAVING  
+✅ Subqueries and nested queries  
+✅ Views and Indexes  
+✅ Stored Procedures & Functions  
+✅ Triggers (Before/After)  
+✅ Transactions and rollback  
+✅ All types of Joins  
+✅ Full SQL course script
+
+---
+
+## 🚀 Getting Started
+
+### Requirements
+- MySQL Server (version 8.0+ recommended)
+- MySQL Workbench / CLI / phpMyAdmin
+  
+### Running the SQL Files
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/shovo896/my_sql.git
+````
+
+2. Open your preferred MySQL client.
+3. Load and run the `.sql` files one by one.
+4. Make sure the database used in each script is created and selected with `USE`.
+
+
+## Learning Goal
+
+This repository is ideal for:
+
+* Students preparing for SQL exams/interviews
+* Developers brushing up MySQL skills
+* Beginners who want practical scripts
+* Anyone who wants to revise full MySQL course with examples
+
+---
+
+## Contributing
+
+If you'd like to contribute improvements or new examples:
+
+1. Fork this repository
+2. Add your SQL files
+3. Submit a pull request
+
+
+
+
+##  Contact
+
+Feel free to reach out via [GitHub Issues](https://github.com/shovo896/my_sql/issues) for any suggestions or corrections.
+
+Happy SQLing! 
+
