@@ -9,7 +9,7 @@ This repository is maintained by [shovo896](https://github.com/shovo896) and is 
 ## Repository Structure
 
 
-my\_sql/
+mysql
 │
 ├── basic\_commands.sql          -- Basic SQL syntax: SELECT, INSERT, DELETE, UPDATE
 ├── joins.sql                   -- INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN
@@ -25,7 +25,7 @@ my\_sql/
 
 ---
 
-## 🧠 Topics Covered
+##  Topics Covered
 
 ✅ Database creation and basic DDL  
 ✅ Data types and constraints  
@@ -41,7 +41,7 @@ my\_sql/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Requirements
 - MySQL Server (version 8.0+ recommended)
