@@ -4,26 +4,26 @@
 Welcome to the MySQL Practice Repository  
 This repository is maintained by [shovo896](https://github.com/shovo896) and is intended for learning, practicing, and  demonstrating all key concepts of MySQL through real-world examples and SQL scripts.
 
----
+
 
 ## Repo Structure
 
 
 mysql
 │
-├── basic\_commands.sql          -- Basic SQL syntax: SELECT, INSERT, DELETE, UPDATE
+├── basiccommands.sql          -- Basic SQL syntax: SELECT, INSERT, DELETE, UPDATE
 ├── joins.sql                   -- INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN
 ├── subqueries.sql              -- Subqueries, nested SELECTs, correlated subqueries
-├── views\_and\_indexes.sql       -- Creating and managing views and indexes
+├── views and indexes.sql       -- Creating and managing views and indexes
 ├── triggers.sql                -- BEFORE/AFTER INSERT/UPDATE/DELETE triggers
-├── procedures\_and\_functions.sql-- Stored procedures and user-defined functions
+├── procedures and functions.sql-- Stored procedures and user-defined functions
 ├── transactions.sql            -- COMMIT, ROLLBACK, SAVEPOINT
 ├── constraints.sql             -- Primary, Foreign, Unique, Check constraints
-├── full\_course\_summary.sql     -- Full MySQL course in a single 300+ line script
+├── full course summary.sql     -- Full MySQL course in a single 300+ line script
 └── README.md                   -- Documentation (this file)
 
 
----
+
 
 ##  Topics Covered
 
@@ -49,9 +49,9 @@ mysql
   
 ### Running the SQL Files
 1. Clone this repository:
-   ```bash
+   bash
    git clone https://github.com/shovo896/my_sql.git
-````
+
 
 2. Open your preferred MySQL client.
 3. Load and run the `.sql` files one by one.
@@ -67,7 +67,7 @@ This repository is ideal for:
 * Beginners who want practical scripts
 * Anyone who wants to revise full MySQL course with examples
 
----
+
 
 ## Contributing
 
