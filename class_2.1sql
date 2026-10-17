@@ -1,0 +1,61 @@
+select * 
+from follows f 
+
+insert into  likes(id,follow_id,followe_id)  values ('adaefhbxha','tabe','wqhgyhw@gmail.com')
+
+
+
+select *
+     u."name"
+     (
+     select 
+     
+     from follows f 
+     
+     where f.follow_id = u.id 
+     
+     
+     )
+
+
+from users u 
+
+
+
+
+select * 
+from  tweets t 
+
+limit 5  
+
+
+alter table tweets 
+    add constant fk_tweets_user
+    foreign key (author_id)
+    references user(id); 
+
+
+
+drop table likes 
+
+
+alter table likes 
+       add constraint fk_likes_tweets
+       foreign key (tweet_id)
+       references tweets(id)
+       
+       
+       
+
+
+
+
+
+
+
+
+
+   
+   
+
+
